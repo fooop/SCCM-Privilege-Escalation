@@ -5,5 +5,12 @@ System administrators using SCCM will in many cases write vulnerable application
 - Hardcoded credentials
 - Other restricted information
 
-This script will scan `C:\Windows\CCM\Logs\AppEnforce.log` and will find directories under `C:\Windows\CCMCache`, containing cached installation scripts.
+This script will scan `C:\Windows\CCM\Logs\AppEnforce.log` and will return eventual directories under `C:\Windows\CCMCache` containing cached installation scripts.
 The directory `C:\Windows\CCMCache` is normally unaccessible to non-administrators, but it's subdirectories can be accessed if the direct path is known.
+
+Usage:
+```
+powershell.exe .\CCMCACHE_SCAN.ps1
+```
+
+
